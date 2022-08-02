@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Git Clone') {
+        stage('Build docker image') {
             steps {
-                git 'https://github.com/tachillon/Minimal-Python-OpenCV-Docker.git'
+                sh 'docker build -t test:1 .'
             }
         }
     }
